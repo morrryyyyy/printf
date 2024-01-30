@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * printf - write output to standard output
+ * _printf - write output to standard output
  *@format: the format string
  *
  * Return: the number of characters printed
@@ -15,7 +15,6 @@ int _printf(const char *format, ...)
 
 	count = 0;
 	va_start(args, format);
-
 	while (format != NULL && *format != '\0')
 	{
 		if (*format != '%')
@@ -26,16 +25,14 @@ int _printf(const char *format, ...)
 		else if (*format == '%')
 		{
 			format++;
-			switch(*format)
+			switch (*format)
 			{
 			case 'c':
-				c = va_arg(args, int);
-				_putchar(c);
+				_putchar(va_arg(args, int));
 				count++;
 				break;
 			case 's':
-				str = va_arg(args, char *);
-				count += print_str(str);
+				count += print_str(va_arg(args, char *));
 				break;
 			case '%':
 				_putchar('%');

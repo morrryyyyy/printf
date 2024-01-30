@@ -2,7 +2,7 @@
 
 /**
  * print_str - prints a string to the standard output
- *@str: the string
+ *@s: the string
  *
  * Return: Always 0
  */
