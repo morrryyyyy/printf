@@ -10,8 +10,12 @@ int print_str(char *s)
 {
 	int count;
 
+	if (s == NULL)
+		return (0);
+
 	count = 0;
-	while (s != NULL && *s != '\0')
+
+	while (*s != '\0')
 	{
 		_putchar(*s);
 		count++;

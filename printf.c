@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 			_putchar(*format);
 			count++;
 		}
-		else if (*format == '%' && args != NULL)
+		else if (*format == '%' && *(format + 1) != '\0')
 		{
 			format++;
 			switch (*format)
