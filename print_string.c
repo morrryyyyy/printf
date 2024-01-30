@@ -8,10 +8,14 @@
  */
 int print_str(char *s)
 {
+	int count;
+
+	count = 0;
 	while ((s != NULL) && (*s != '\0'))
 	{
 		_putchar(*s);
 		s++;
+		count++;
 	}
-	return (0);
+	return (count);
 }
