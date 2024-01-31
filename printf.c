@@ -21,8 +21,7 @@ int _printf(const char *format, ...)
 		{
 			count += _putchar(*format);
 		}
-		else if (*(format + 1) == '\0')
-			return (-1);
+		else if (*(format + 1) != '\0')
 		{
 			format++;
 			switch (*format)
