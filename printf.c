@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 			_putchar(*format);
 			count++;
 		}
-		else if (*format == '%')
+		else if (*(format + 1) != '\0')
 		{
 			format++;
 			switch (*format)
@@ -39,11 +39,12 @@ int _printf(const char *format, ...)
 				count++;
 				break;
 			default:
-				count += _putchar(*(format - 1));
 				count += _putchar(*format);
 				break;
 			}
 		}
+		else
+			return (-1);
 		format++;
 	}
 	va_end(args);
