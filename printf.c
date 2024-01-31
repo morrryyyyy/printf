@@ -39,6 +39,7 @@ int _printf(const char *format, ...)
 				count++;
 				break;
 			default:
+				count += _putchar(*(format - 1));
 				count += _putchar(*format);
 				break;
 			}

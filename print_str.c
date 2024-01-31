@@ -11,8 +11,7 @@ int print_str(char *s)
 	int count;
 
 	if (s == NULL)
-		return (0);
-
+		s = "(null)";
 	count = 0;
 
 	while (*s != '\0')
