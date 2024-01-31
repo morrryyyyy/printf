@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 				count++;
 				break;
 			default:
-				count += print_str("Unidentified specifier");
+				count += putchar(*format);
 				break;
 			}
 		}
