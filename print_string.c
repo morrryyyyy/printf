@@ -8,16 +8,15 @@
  */
 int print_str(char *s)
 {
-        int count;
+	int count;
 
-        count = 0;
+	count = 0;
 	if (s == NULL)
 		s = "(null)";
-        while (*s != '\0')
-        {
-                count += _putchar(*s);
-                s++;
-        }
-        return (count);
+	while (*s != '\0')
+	{
+		count += _putchar(*s);
+		s++;
+	}
+	return (count);
 }
-

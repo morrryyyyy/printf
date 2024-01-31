@@ -13,12 +13,13 @@ int print_int(int n)
 
 	count = 0;
 
-	if (n == INT_MIN) {
-        count += _putchar('-');
-        count += _putchar('2');
-        count += print_int(INT_MAX % 1000000000 + 1);
-        return count;
-    }
+	if (n == INT_MIN)
+	{
+		count += _putchar('-');
+		count += _putchar('2');
+		count += print_int(INT_MAX % 1000000000 + 1);
+		return (count);
+	}
 	if (n < 0)
 	{
 		count += _putchar('-');
