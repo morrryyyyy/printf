@@ -15,8 +15,7 @@ int print_str(char *s)
 		s = "(null)";
         while (*s != '\0')
         {
-                _putchar(*s);
-                count++;
+                count += _putchar(*s);
                 s++;
         }
         return (count);
