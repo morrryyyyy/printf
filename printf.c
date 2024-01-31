@@ -19,24 +19,22 @@ int _printf(const char *format, ...)
 	{
 		if (*format != '%')
 		{
-			_putchar(*format);
-			count++;
+			count += _putchar(*format);
 		}
-		else if (*(format + 1) != '\0')
+		else if (*(format + 1) == '\0')
+			return (-1);
 		{
 			format++;
 			switch (*format)
 			{
 			case 'c':
-				_putchar(va_arg(args, int));
-				count++;
+				count += _putchar(va_arg(args, int));
 				break;
 			case 's':
 				count += print_str(va_arg(args, char *));
 				break;
 			case '%':
-				_putchar('%');
-				count++;
+				count += _putchar('%');
 				break;
 			default:
 				count += _putchar('%');
